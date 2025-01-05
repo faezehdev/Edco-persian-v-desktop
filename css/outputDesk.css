@@ -665,8 +665,20 @@ video {
   right: 0px;
 }
 
+.right-1 {
+  right: 0.25rem;
+}
+
 .top-0 {
   top: 0px;
+}
+
+.bottom-4 {
+  bottom: 1rem;
+}
+
+.bottom-8 {
+  bottom: 2rem;
 }
 
 .isolate {
@@ -772,6 +784,14 @@ video {
 
 .mt-\[4em\] {
   margin-top: 4em;
+}
+
+.mt-\[5em\] {
+  margin-top: 5em;
+}
+
+.mb-\[5em\] {
+  margin-bottom: 5em;
 }
 
 .box-border {
@@ -2168,20 +2188,16 @@ video {
   padding-bottom: 5em;
 }
 
+.pb-\[1em\] {
+  padding-bottom: 1em;
+}
+
 .pl-\[\.5em\] {
   padding-left: .5em;
 }
 
 .pr-\[\.5em\] {
   padding-right: .5em;
-}
-
-.pb-\[\.5em\] {
-  padding-bottom: .5em;
-}
-
-.pb-\[1em\] {
-  padding-bottom: 1em;
 }
 
 .pt-\[2em\] {
@@ -2260,6 +2276,10 @@ video {
   font-family: IRANSansWebFANUM700;
 }
 
+.font-IRANSansWebFANUM900 {
+  font-family: IRANSansWebFANUM900;
+}
+
 .font-IbarraRealNova400 {
   font-family: IbarraRealNova400;
 }
@@ -2275,6 +2295,10 @@ video {
 
 .text-\[11px\] {
   font-size: 11px;
+}
+
+.text-\[60px\] {
+  font-size: 60px;
 }
 
 .text-base {
@@ -2385,6 +2409,10 @@ video {
   font-variant-numeric: var(--tw-ordinal) var(--tw-slashed-zero) var(--tw-numeric-figure) var(--tw-numeric-spacing) var(--tw-numeric-fraction);
 }
 
+.leading-18\.75 {
+  line-height: 18.75px;
+}
+
 .leading-18\.78 {
   line-height: 18.78px;
 }
@@ -2413,6 +2441,10 @@ video {
   line-height: 15.65px;
 }
 
+.leading-\[15px\] {
+  line-height: 15px;
+}
+
 .leading-\[17\.22px\] {
   line-height: 17.22px;
 }
@@ -2425,12 +2457,8 @@ video {
   line-height: 26.78px;
 }
 
-.leading-\[15px\] {
-  line-height: 15px;
-}
-
-.leading-18\.75 {
-  line-height: 18.75px;
+.leading-\[93\.91px\] {
+  line-height: 93.91px;
 }
 
 .text-\[\#336699\]\/\[\.35\] {
@@ -2873,6 +2901,24 @@ video {
 @font-face {
   font-family: "IRANSansWebFANUM700";
 
+  src: url("../_fonts/IRANSansWeb(FaNum)_Black.eot");
+
+  src: url("../_fonts/IRANSansWeb(FaNum)_Black.eot?#iefix")
+        format("embedded-opentype"),
+      url("../_fonts/IRANSansWeb(FaNum)_Black.woff") format("woff"),
+      url("../_fonts/IRANSansWeb(FaNum)_Black.woff2") format("woff2"),
+      url("../_fonts/IRANSansWeb(FaNum)_Black.ttf") format("truetype");
+
+  font-weight: 700;
+
+  font-style: normal;
+
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "IRANSansWebFANUM900";
+
   src: url("../_fonts/IRANSansWeb(FaNum)_Bold.eot");
 
   src: url("../_fonts/IRANSansWeb(FaNum)_Bold.eot?#iefix")
@@ -3149,6 +3195,12 @@ main.Home .Aboutus.bg{
 }
 
 .group\/project:hover .group-hover\/project\:scale-\[1\.1\] {
+  --tw-scale-x: 1.1;
+  --tw-scale-y: 1.1;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.group\/catalog:hover .group-hover\/catalog\:scale-\[1\.1\] {
   --tw-scale-x: 1.1;
   --tw-scale-y: 1.1;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));

@@ -39,6 +39,18 @@
   }
   @font-face {
     font-family: "IRANSansWebFANUM700";
+    src: url("../_fonts/IRANSansWeb(FaNum)_Black.eot");
+    src: url("../_fonts/IRANSansWeb(FaNum)_Black.eot?#iefix")
+        format("embedded-opentype"),
+      url("../_fonts/IRANSansWeb(FaNum)_Black.woff") format("woff"),
+      url("../_fonts/IRANSansWeb(FaNum)_Black.woff2") format("woff2"),
+      url("../_fonts/IRANSansWeb(FaNum)_Black.ttf") format("truetype");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "IRANSansWebFANUM900";
     src: url("../_fonts/IRANSansWeb(FaNum)_Bold.eot");
     src: url("../_fonts/IRANSansWeb(FaNum)_Bold.eot?#iefix")
         format("embedded-opentype"),
