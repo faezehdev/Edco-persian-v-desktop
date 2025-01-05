@@ -802,6 +802,10 @@ video {
   margin-top: 5em;
 }
 
+.mt-\[8em\] {
+  margin-top: 8em;
+}
+
 .box-border {
   box-sizing: border-box;
 }
@@ -3103,6 +3107,18 @@ main.ProjectShow .swiper-slide{
 main.ProjectShow .swiper-button-prev:after,main.ProjectShow .swiper-rtl .swiper-button-next:after {
   color: #373737;
   font-size: 24px;
+}
+
+main.ProductCat-C .swiper-pagination-bullet {
+  width: 18px !important;
+  height: 18px !important;
+  background-color: #00A752;
+  border-radius: 29px;
+}
+
+main.ProductCat-C .swiper-button-prev:after,main.ProductCat-C .swiper-rtl .swiper-button-next:after {
+  color: #ffff;
+  font-size: 34px;
 }
 
 @media (min-width: 480px) {

@@ -163,3 +163,13 @@ main.ProjectShow .swiper-button-prev:after,main.ProjectShow .swiper-rtl .swiper-
     color: #373737;
     font-size: 24px;
 }
+main.ProductCat-C .swiper-pagination-bullet {
+    width: 18px !important;
+    height: 18px !important;
+    background-color: #00A752;
+    border-radius: 29px;
+}
+main.ProductCat-C .swiper-button-prev:after,main.ProductCat-C .swiper-rtl .swiper-button-next:after {
+    color: #ffff;
+    font-size: 34px;
+}
