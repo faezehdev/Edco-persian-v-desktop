@@ -15,27 +15,18 @@ module.exports = {
       "in-expo": "cubic-bezier(0.25, 0.1, 0.25, 1)",
     },
     colors: {
-      main_light: "#F4C7D6",
-      main: "#FC578C",
-      dark_gray: "#434343",
-      light_gray: "#E8E1E3",
-      medium_gray: "#7E7E7E",
-      text_black: "#181818",
-      white: "#FFFFFF",
-      black: "#000000",
-     mediumGray :"#7E7E7E",
-     dark:'#181818'
+   dark:'#000000',
+   green:'#00A752',
+   white:'#FFFFFF',
+   dark1:'#1F1F1F'
      
     },
     fontFamily: {
-   
-      YekanBakh400: ["YekanBakh400"],
-      YekanBakh500: ["YekanBakh500"],
-      YekanBakh700: ["YekanBakh700"],
-      IRANSans400: ["IRANSans400"],
-      IRANSans500: ["IRANSans500"],
-      IRANSans700: ["IRANSans700"],
-     
+      IRANSansWebFANUM300: ["IRANSansWebFANUM300"],
+      IRANSansWebFANUM400: ["IRANSansWebFANUM400"],
+      IRANSansWebFANUM500: ["IRANSansWebFANUM500"],
+      IRANSansWebFANUM700: ["IRANSansWebFANUM700"],
+      IbarraRealNova400:["IbarraRealNova400"]
     },
     extend: {
       borderRadius: {
@@ -80,7 +71,7 @@ module.exports = {
       width: {
         "85p": "85%",
         "90p": "90%",
-        "95p": "90%",
+        "95p": "95%",
 
       },
       maxWidth: {
