@@ -770,6 +770,10 @@ video {
   margin-right: 0.75rem;
 }
 
+.mr-\[\.5em\] {
+  margin-right: .5em;
+}
+
 .mt-2 {
   margin-top: 0.5rem;
 }
@@ -796,10 +800,6 @@ video {
 
 .mt-\[5em\] {
   margin-top: 5em;
-}
-
-.mt-\[1em\] {
-  margin-top: 1em;
 }
 
 .box-border {
@@ -909,6 +909,10 @@ video {
   height: 100svh;
 }
 
+.h-\[133px\] {
+  height: 133px;
+}
+
 .h-\[24px\] {
   height: 24px;
 }
@@ -927,6 +931,10 @@ video {
 
 .w-90p {
   width: 90%;
+}
+
+.w-\[134px\] {
+  width: 134px;
 }
 
 .w-\[20px\] {
@@ -1965,6 +1973,10 @@ video {
   border-right-width: 1px;
 }
 
+.border-r-\[3px\] {
+  border-right-width: 3px;
+}
+
 .border-s {
   border-inline-start-width: 1px;
 }
@@ -2183,6 +2195,11 @@ video {
 .py-\[\.5em\] {
   padding-top: .5em;
   padding-bottom: .5em;
+}
+
+.py-\[1\.5em\] {
+  padding-top: 1.5em;
+  padding-bottom: 1.5em;
 }
 
 .py-\[2em\] {
@@ -3078,6 +3095,16 @@ main.Home .Aboutus.bg{
   transition: all 1000ms ease-in-out;
 }
 
+main.ProjectShow .swiper-slide{
+  width: -moz-fit-content !important;
+  width: fit-content !important;
+}
+
+main.ProjectShow .swiper-button-prev:after,main.ProjectShow .swiper-rtl .swiper-button-next:after {
+  color: #373737;
+  font-size: 24px;
+}
+
 @media (min-width: 480px) {
   .sm\:container {
     width: 100%;
@@ -3279,14 +3306,6 @@ main.Home .Aboutus.bg{
 
 .\[\&\.hover\]\:opacity-\[\.6\].hover {
   opacity: .6;
-}
-
-.\[\&\.show\]\:flex.show {
-  display: flex;
-}
-
-.\[\&\.show\]\:max-h-\[auto\].show {
-  max-height: auto;
 }
 
 .\[\&\.show\]\:max-h-\[unset\].show {

@@ -156,3 +156,10 @@ background-size: cover;
 .project img{
     transition: all 1000ms ease-in-out;
 }
+main.ProjectShow .swiper-slide{
+    width: fit-content !important;
+}
+main.ProjectShow .swiper-button-prev:after,main.ProjectShow .swiper-rtl .swiper-button-next:after {
+    color: #373737;
+    font-size: 24px;
+}
