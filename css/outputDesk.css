@@ -653,6 +653,14 @@ video {
   inset: -0.25rem;
 }
 
+.bottom-4 {
+  bottom: 1rem;
+}
+
+.bottom-8 {
+  bottom: 2rem;
+}
+
 .end-1 {
   inset-inline-end: 0.25rem;
 }
@@ -671,14 +679,6 @@ video {
 
 .top-0 {
   top: 0px;
-}
-
-.bottom-4 {
-  bottom: 1rem;
-}
-
-.bottom-8 {
-  bottom: 2rem;
 }
 
 .isolate {
@@ -750,8 +750,16 @@ video {
   margin-right: auto;
 }
 
+.mb-6 {
+  margin-bottom: 1.5rem;
+}
+
 .mb-\[4em\] {
   margin-bottom: 4em;
+}
+
+.mb-\[5em\] {
+  margin-bottom: 5em;
 }
 
 .ml-auto {
@@ -790,8 +798,8 @@ video {
   margin-top: 5em;
 }
 
-.mb-\[5em\] {
-  margin-bottom: 5em;
+.mt-\[1em\] {
+  margin-top: 1em;
 }
 
 .box-border {
@@ -911,6 +919,10 @@ video {
 
 .h-screen {
   height: 100vh;
+}
+
+.max-h-0 {
+  max-height: 0px;
 }
 
 .w-90p {
@@ -2192,6 +2204,10 @@ video {
   padding-bottom: 1em;
 }
 
+.pb-\[4em\] {
+  padding-bottom: 4em;
+}
+
 .pl-\[\.5em\] {
   padding-left: .5em;
 }
@@ -2297,8 +2313,16 @@ video {
   font-size: 11px;
 }
 
+.text-\[30px\] {
+  font-size: 30px;
+}
+
 .text-\[60px\] {
   font-size: 60px;
+}
+
+.text-\[70px\] {
+  font-size: 70px;
 }
 
 .text-base {
@@ -2437,6 +2461,10 @@ video {
   line-height: 37.57px;
 }
 
+.leading-\[109\.7px\] {
+  line-height: 109.7px;
+}
+
 .leading-\[15\.65px\] {
   line-height: 15.65px;
 }
@@ -2455,6 +2483,10 @@ video {
 
 .leading-\[26\.78px\] {
   line-height: 26.78px;
+}
+
+.leading-\[46\.96px\] {
+  line-height: 46.96px;
 }
 
 .leading-\[93\.91px\] {
@@ -3162,6 +3194,10 @@ main.Home .Aboutus.bg{
   content: var(--tw-content);
 }
 
+.hover\:cursor-pointer:hover {
+  cursor: pointer;
+}
+
 .hover\:font-bold:hover {
   font-weight: 700;
 }
@@ -3194,13 +3230,13 @@ main.Home .Aboutus.bg{
   text-align: center;
 }
 
-.group\/project:hover .group-hover\/project\:scale-\[1\.1\] {
+.group\/catalog:hover .group-hover\/catalog\:scale-\[1\.1\] {
   --tw-scale-x: 1.1;
   --tw-scale-y: 1.1;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
-.group\/catalog:hover .group-hover\/catalog\:scale-\[1\.1\] {
+.group\/project:hover .group-hover\/project\:scale-\[1\.1\] {
   --tw-scale-x: 1.1;
   --tw-scale-y: 1.1;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -3243,4 +3279,25 @@ main.Home .Aboutus.bg{
 
 .\[\&\.hover\]\:opacity-\[\.6\].hover {
   opacity: .6;
+}
+
+.\[\&\.show\]\:flex.show {
+  display: flex;
+}
+
+.\[\&\.show\]\:max-h-\[auto\].show {
+  max-height: auto;
+}
+
+.\[\&\.show\]\:max-h-\[unset\].show {
+  max-height: unset;
+}
+
+.\[\&\.show\]\:translate-y-\[0\].show {
+  --tw-translate-y: 0;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.\[\&\.show\]\:opacity-\[1\].show {
+  opacity: 1;
 }
