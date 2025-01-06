@@ -818,6 +818,11 @@ video {
   margin-bottom: 3em;
 }
 
+.my-\[5em\] {
+  margin-top: 5em;
+  margin-bottom: 5em;
+}
+
 .my-auto {
   margin-top: auto;
   margin-bottom: auto;
@@ -829,6 +834,10 @@ video {
 
 .mb-6 {
   margin-bottom: 1.5rem;
+}
+
+.mb-\[3\.5em\] {
+  margin-bottom: 3.5em;
 }
 
 .mb-\[3em\] {
@@ -875,6 +884,10 @@ video {
   margin-top: 0.75rem;
 }
 
+.mt-4 {
+  margin-top: 1rem;
+}
+
 .mt-6 {
   margin-top: 1.5rem;
 }
@@ -889,6 +902,10 @@ video {
 
 .mt-\[2em\] {
   margin-top: 2em;
+}
+
+.mt-\[3\.5em\] {
+  margin-top: 3.5em;
 }
 
 .mt-\[3em\] {
@@ -909,14 +926,6 @@ video {
 
 .mt-\[8em\] {
   margin-top: 8em;
-}
-
-.mb-\[2em\] {
-  margin-bottom: 2em;
-}
-
-.mb-\[3\.5em\] {
-  margin-bottom: 3.5em;
 }
 
 .box-border {
@@ -1046,6 +1055,14 @@ video {
   height: 3px;
 }
 
+.h-\[480px\] {
+  height: 480px;
+}
+
+.h-\[520px\] {
+  height: 520px;
+}
+
 .h-\[560px\] {
   height: 560px;
 }
@@ -1135,6 +1152,10 @@ video {
   width: 50%;
 }
 
+.w-\[550px\] {
+  width: 550px;
+}
+
 .w-\[60\%\] {
   width: 60%;
 }
@@ -1200,6 +1221,10 @@ video {
 
 .max-w-\[531px\] {
   max-width: 531px;
+}
+
+.max-w-\[550px\] {
+  max-width: 550px;
 }
 
 .flex-shrink {
@@ -1773,8 +1798,16 @@ video {
   gap: 1.75rem;
 }
 
+.gap-8 {
+  gap: 2rem;
+}
+
 .gap-\[2em\] {
   gap: 2em;
+}
+
+.gap-\[3\.5em\] {
+  gap: 3.5em;
 }
 
 .gap-\[4em\] {
@@ -1783,18 +1816,6 @@ video {
 
 .gap-\[5em\] {
   gap: 5em;
-}
-
-.gap-\[3em\] {
-  gap: 3em;
-}
-
-.gap-\[3\.5em\] {
-  gap: 3.5em;
-}
-
-.gap-8 {
-  gap: 2rem;
 }
 
 .space-x-2 > :not([hidden]) ~ :not([hidden]) {
@@ -2570,6 +2591,14 @@ video {
   padding-top: 80px;
 }
 
+.pt-\[3em\] {
+  padding-top: 3em;
+}
+
+.pt-\[1em\] {
+  padding-top: 1em;
+}
+
 .text-left {
   text-align: left;
 }
@@ -2874,6 +2903,10 @@ video {
 
 .leading-\[93\.91px\] {
   line-height: 93.91px;
+}
+
+.leading-\[33\.48px\] {
+  line-height: 33.48px;
 }
 
 .text-\[\#336699\]\/\[\.35\] {
@@ -3623,6 +3656,11 @@ main.ProductCat-C .swiper-button-prev:after,main.ProductCat-C .swiper-rtl .swipe
   bottom: 0px;
 }
 
+.before\:left-0::before {
+  content: var(--tw-content);
+  left: 0px;
+}
+
 .before\:right-0::before {
   content: var(--tw-content);
   right: 0px;
@@ -3641,6 +3679,11 @@ main.ProductCat-C .swiper-button-prev:after,main.ProductCat-C .swiper-rtl .swipe
 .before\:z-0::before {
   content: var(--tw-content);
   z-index: 0;
+}
+
+.before\:z-1::before {
+  content: var(--tw-content);
+  z-index: 1;
 }
 
 .before\:z-2::before {
@@ -3696,6 +3739,11 @@ main.ProductCat-C .swiper-button-prev:after,main.ProductCat-C .swiper-rtl .swipe
 .before\:overflow-y-hidden::before {
   content: var(--tw-content);
   overflow-y: hidden;
+}
+
+.before\:bg-\[\#0000002E\]::before {
+  content: var(--tw-content);
+  background-color: #0000002E;
 }
 
 .before\:bg-\[\#FE7D21\]::before {
