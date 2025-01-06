@@ -250,3 +250,11 @@ main.ProductCat2-C .proCat{
   background-repeat: no-repeat;
   background-size: cover;
 }
+.product-c {
+  flex: 1 1 calc(33.333% );
+  max-width:calc(33.333%);
+}
+
+.w-90p{
+max-width: 1400px;
+}
