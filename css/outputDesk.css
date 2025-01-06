@@ -745,6 +745,14 @@ video {
   z-index: 99;
 }
 
+.order-1 {
+  order: 1;
+}
+
+.order-2 {
+  order: 2;
+}
+
 .float-start {
   float: inline-start;
 }
@@ -904,10 +912,6 @@ video {
   margin-top: 2em;
 }
 
-.mt-\[3\.5em\] {
-  margin-top: 3.5em;
-}
-
 .mt-\[3em\] {
   margin-top: 3em;
 }
@@ -1055,6 +1059,10 @@ video {
   height: 3px;
 }
 
+.h-\[44px\] {
+  height: 44px;
+}
+
 .h-\[480px\] {
   height: 480px;
 }
@@ -1065,6 +1073,10 @@ video {
 
 .h-\[560px\] {
   height: 560px;
+}
+
+.h-\[70px\] {
+  height: 70px;
 }
 
 .h-\[72px\] {
@@ -1140,12 +1152,20 @@ video {
   width: 260px;
 }
 
+.w-\[270px\] {
+  width: 270px;
+}
+
 .w-\[3px\] {
   width: 3px;
 }
 
 .w-\[480px\] {
   width: 480px;
+}
+
+.w-\[4px\] {
+  width: 4px;
 }
 
 .w-\[50\%\] {
@@ -1802,6 +1822,10 @@ video {
   gap: 2rem;
 }
 
+.gap-\[1em\] {
+  gap: 1em;
+}
+
 .gap-\[2em\] {
   gap: 2em;
 }
@@ -2303,6 +2327,11 @@ video {
   border-style: none;
 }
 
+.border-dark {
+  --tw-border-opacity: 1;
+  border-color: rgb(0 0 0 / var(--tw-border-opacity, 1));
+}
+
 .border-green {
   --tw-border-opacity: 1;
   border-color: rgb(0 167 82 / var(--tw-border-opacity, 1));
@@ -2587,16 +2616,12 @@ video {
   padding-top: 2em;
 }
 
-.pt-\[80px\] {
-  padding-top: 80px;
-}
-
 .pt-\[3em\] {
   padding-top: 3em;
 }
 
-.pt-\[1em\] {
-  padding-top: 1em;
+.pt-\[80px\] {
+  padding-top: 80px;
 }
 
 .text-left {
@@ -2700,6 +2725,10 @@ video {
   font-size: 30px;
 }
 
+.text-\[52px\] {
+  font-size: 52px;
+}
+
 .text-\[60px\] {
   font-size: 60px;
 }
@@ -2735,6 +2764,10 @@ video {
 
 .font-bold {
   font-weight: 700;
+}
+
+.font-extralight {
+  font-weight: 200;
 }
 
 .font-light {
@@ -2893,6 +2926,10 @@ video {
   line-height: 26.78px;
 }
 
+.leading-\[33\.48px\] {
+  line-height: 33.48px;
+}
+
 .leading-\[40\.18px\] {
   line-height: 40.18px;
 }
@@ -2901,12 +2938,12 @@ video {
   line-height: 46.96px;
 }
 
-.leading-\[93\.91px\] {
-  line-height: 93.91px;
+.leading-\[81\.39px\] {
+  line-height: 81.39px;
 }
 
-.leading-\[33\.48px\] {
-  line-height: 33.48px;
+.leading-\[93\.91px\] {
+  line-height: 93.91px;
 }
 
 .text-\[\#336699\]\/\[\.35\] {
@@ -3616,6 +3653,11 @@ main.ProductCat-C .swiper-button-prev:after,main.ProductCat-C .swiper-rtl .swipe
   background-color:#00A752 !important;
 }
 
+main.ProductCat2-C .proCat{
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 @media (min-width: 480px) {
   .sm\:container {
     width: 100%;
@@ -3806,6 +3848,14 @@ main.ProductCat-C .swiper-button-prev:after,main.ProductCat-C .swiper-rtl .swipe
 
 .hover\:focus\:text-center:focus:hover {
   text-align: center;
+}
+
+.group\/proCat:nth-child(odd) .group-odd\/proCat\:order-1 {
+  order: 1;
+}
+
+.group\/proCat:nth-child(odd) .group-odd\/proCat\:order-2 {
+  order: 2;
 }
 
 .group\/catalog:hover .group-hover\/catalog\:scale-\[1\.1\] {

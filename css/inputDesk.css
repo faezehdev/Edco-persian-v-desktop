@@ -246,3 +246,7 @@ transition: color .8s ease 0s;
 .swiper-scrollbar-drag{
   background-color:#00A752 !important;
 }
+main.ProductCat2-C .proCat{
+  background-repeat: no-repeat;
+  background-size: cover;
+}
