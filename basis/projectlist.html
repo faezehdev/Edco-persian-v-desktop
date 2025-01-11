@@ -1,0 +1,174 @@
+<basis core="dbsource" name="db" source="basiscore" lid="1" mid="19" catid="71229"> 
+    <member name="ProjectDef" size="1280x623" propertyid="13903,13889,90750,90752,90766" type="list" link="project.bc"
+    postsql="select * from [db.ProjectDef] where ord=1"/> 
+</basis>
+<basis core="dbsource" name="db" source="basiscore" lid="1" mid="19" catid="71229">
+     <member name="list-Project" type="list" size="339x300" propertyid="13903,13889,90750,90752,90766" link="project.bc"/>
+ </basis>
+ <basis core="dbsource" source="basiscore" mid="1" lid="1" name="db" catid="71198"> 
+    <member name="articles" type="list" link="article.bc" propertyid="7245" size="305X177" postsql=" select *, SUBSTR(prp_7245, 1,200-CHARINDEX(' ', REVERSE(SUBSTR(prp_7245, 1, 200)))) || '...' as substr from [db.articles]"> 
+ </member>
+ </basis>
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>پروژه‌ها</title>
+    <meta name="description" content="پروژه‌ها">
+    <basis core="call" file="styles.inc" pageindex="[##cms.cms.pageindex##]"/>
+</head>
+<body>
+    <main class="ProjectList-C flex flex-col overflow-hidden"  dir="rtl">
+        <basis core="call" file="header.inc" pageindex="[##cms.cms.pageindex##]"/>
+        <section class="section-1 w-full h-screen flex justify-center items-center">
+            <basis core="print" datamembername="db.ProjectDef">
+                <layout>
+                    @child
+                </layout>
+                <face>
+                    <div class="Banner w-full flex h-full relative">
+                        <div class="IMG w-full h-full">
+                            <img src="[##cms.cms.cdn3##]/@01280X00623prp" alt="@title" title="@title" class="w-full h-full object-cover ">
+                        </div>
+                      <div class="Title absolute flex-col top-0 left-0 pb-[4em] right-0 h-full w-90p mx-auto z-1 flex justify-end items-start">
+                        <h1 class="w-auto flex flex-col font-IRANSansWebFANUM300 font-light text-[70px] leading-[109.7px] text-white">
+                            @title
+                        </h1>
+                        <span class="Detail w-auto flex gap-2">
+                            <h2 class="font-IRANSansWebFANUM700 text-[30px] text-white font-semibold leading-[46.96px]">
+                                @prp_13903
+                            </h2>
+                            <span class="font-IRANSansWebFANUM700 text-[30px] text-white font-semibold leading-[46.96px]">|</span>
+                            <h2 class="font-IRANSansWebFANUM700 text-[30px] text-white font-semibold leading-[46.96px]">
+                                @prp_13889	
+                            </h2>
+                        </span>
+                      </div>
+                    </div>
+                </face>
+            </basis>
+       
+          </section>
+          <section class="section-2 w-full flex mt-[6em]">
+            <div class="Projects-container gap-7 w-full flex flex-col">
+               <div class="Title-big w-90p mx-auto flex justify-start items-start">
+                    <h2 class="font-IRANSansWebFANUM500 text-2xl leading-37.57 text-dark font-medium text-right">
+                        پروژه های ادکو
+                    </h2>
+               </div>
+               <div class="Projects mb-[4em] w-90p mx-auto grid grid-cols-3 gap-[4em]">
+                <basis core="print" datamembername="db.list-Project">
+                    <layout>
+                        @child
+                    </layout>
+                    <face>
+                        <a href="@link"  alt="@title" title="@title" aria-label="@title" rel="noopener" class="project group/project overflow-hidden w-full hidden
+                         flex-col gap-2  [&.show]:flex max-h-0 [&.show]:max-h-[unset] translate-y-[5em] opacity-0
+                        [&.show]:opacity-[1] [&.show]:translate-y-[0]">
+                            <div class="IMG w-full overflow-hidden flex justify-center items-center">
+                                <img src="[##cms.cms.cdn3##]/@00339X00300prp" alt="@title" title="@title" class=" group-hover/project:scale-[1.1] duration-[1000ms]
+                                ease-in-out w-full object-cover">
+                            </div>
+                            <div class="title w-full flex justify-start mt-3">
+                                <p class="font-IRANSansWebFANUM300 font-light text-sm
+                                leading-21.91 text-dark">
+                                @title
+                                </p>
+                            </div>
+                            <div class="Schema-box w-full flex flex-col gap-2">
+   
+                                <div class="Schema w-full flex justify-between items-start">
+                                    <span class="Question w-[50%] max-w-[50%] text-right flex justify-start items-center font-IRANSansWebFANUM300 font-light text-sm
+                                    leading-21.91 text-dark">
+                                    @prp_13903
+        
+                                    </span>
+                                    <span class="Answer w-[50%] max-w-[50%]  flex justify-end items-center font-IRANSansWebFANUM300 font-light text-sm
+                                    leading-21.91 text-dark">
+                                    @prp_13889
+                                    </span>
+                                </div>
+                              
+                                    
+                              </div>
+                    </a>
+                     
+                    </face>
+                </basis>
+             
+               </div>
+               <span class="showMore hover:cursor-pointer group/btn mb-[4em] mx-auto w-max relative before:content-[''] before:absolute before:right-0 before:w-[0px] before:top-0
+               before:bg-green before:h-full before:z-0 before:duration-[.5s] before:ease-in hover:before:w-full
+               py-[.5em] px-[4em] border-[1px] border-green ">
+                  
+                   <span class="text group-hover/btn:text-white duration-75 text-dark font-IRANSansWebFANUM300 
+                   text-[10px] leading-[15.65px] font-light relative z-1">
+                   مشاهده موارد بیشتر
+                   </span>
+               </span>
+            </div>
+        </section>
+        <section class="section-3 w-full flex">
+            <div class="Blogs-container gap-7 w-full flex flex-col">
+               <div class="Title-big w-90p mx-auto flex justify-start items-start">
+                    <h3 class="font-IRANSansWebFANUM500 text-2xl leading-37.57 text-dark font-medium text-right">
+                        مقالات
+                    </h3>
+               </div>
+               <div class="Blogs mb-[4em] w-90p mx-auto grid grid-cols-1 gap-[4em]">
+                <div class="swiper-blogs w-full overflow-hidden py-[1em]">
+                    <div class="swiper-wrapper">
+                        <basis core="print" datamembername="db.articles">
+                            <layout>
+                                @child
+                            </layout>
+                            <face>
+                                <div class="swiper-slide w-full flex">
+                                    <div class="blog group/blog w-full flex flex-col gap-2">
+                                        <div class="IMG w-full overflow-hidden flex justify-center items-center">
+                                            <img src="[##cms.cms.cdn3##]/@00305X00177prp" alt="@title" title="@title" 
+                                            class=" group-hover/project:scale-[1.1] duration-[1000ms]
+                                            ease-in-out w-full object-cover">
+                                        </div>
+                                        <div class="desc w-full flex-col gap-2 flex mt-3 min-h-[50px] justify-start">
+                                            <div class="Title  w-full flex justify-start items-start">
+                                                <p class="font-IRANSansWebFANUM700 font-semibold text-xs leading-18.78
+                                                 text-dark text-right">
+                                                   @title
+                                                </p>
+                                              </div>
+                                              <div class="Text  w-full flex justify-start items-start flex-col">
+                                                <p class="font-IRANSansWebFANUM400 font-normal text-xs leading-18.78 text-dark text-justify">
+                                                @prp_7245
+                                               </p>
+                                              </div>
+                                           </div>
+                                     <a  href="@link"  alt="@title" title="@title" aria-label="@title" rel="noopener" class="showMore group/btn mx-auto w-max relative before:content-[''] before:absolute
+                                      before:right-0 before:w-full before:bottom-0
+                                     before:bg-green before:h-[1px] before:z-0 before:duration-[.5s] before:ease-in hover:before:w-[0px]">
+                                        
+                                         <span class="text text-dark font-IRANSansWebFANUM300 
+                                         text-[10px] leading-[15.65px] font-light relative z-1">
+                                         مشاهده موارد بیشتر
+                                         </span>
+                                     </a>
+                                    </div>
+                                </div>
+                            </face>
+                        </basis>
+                    
+                    </div>
+                </div>
+                 
+           
+               </div>
+            
+            </div>
+        </section>
+        <basis core="call" file="footer.inc" pageindex="[##cms.cms.pageindex##]"/>
+    </main>
+    <basis core="call" file="script.inc" pageindex="[##cms.cms.pageindex##]"/>
+    <script src="[##cms.cms.cdn3##]/js/project-list.js"></script>
+</body>
+</html>

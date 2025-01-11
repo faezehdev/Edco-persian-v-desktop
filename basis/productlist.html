@@ -1,0 +1,73 @@
+<basis core="dbsource" source="basiscore" name="db" lid="2" mid="20" >
+    <member request="cat" type="tree" name="productCat"  parentid="[##cms.query.catid##]" />
+</basis>
+<basis core="dbsource" source="basiscore" name="db" lid="2" mid="20">
+    <member request="cat" type="tree" name="subCat"  parentid="[##cms.query.catid##]"  
+    postsql="select * from [db.subCat] where parentid=[##cms.query.catid##]" />
+</basis>
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[##cms.seo.title##]</title>
+    <meta name="description" content="[##cms.seo.description##]">
+    <basis core="call" file="styles.inc" pageindex="[##cms.cms.pageindex##]"/>
+    <style>
+        .subcat{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <main class="ProductList-C justify-between flex flex-col overflow-hidden" dir="rtl">
+        <basis core="call" file="header.inc" pageindex="[##cms.cms.pageindex##]"/>
+
+        <basis core="print" datamembername="db.productCat">
+            <face filter="RowNumber in (1)">
+        <section class="banner w-full h-screen flex" style="background-image: url([##cms.cms.cdn##]/images/list@catid.jpg);">
+            <div class="inner w-90p mx-auto flex h-full justify-center items-center">
+                <div class="rightSec w-[50%] flex flex-col justify-start items-start">
+                    <div class="Detail w-full flex flex-col justify-center items-center">
+                        <div class="Title w-full mx-auto flex justify-start items-center">
+                            <h1 class="font-IRANSansWebFANUM700 font-semibold text-[32px] leading-[50.09px] text-white">
+                                @title
+                            </h1>
+                        </div>
+                        <div class="Text w-auto flex flex-col gap-2">
+                            <p class="font-IRANSansWebFANUM300 font-light text-[25px] leading-[39.12px] text-white text-justify">
+                                @urldescription
+                             </p>
+                        </div>
+                    </div>
+               </div>
+               <div class="leftSec w-[50%] flex flex-col justify-center items-center">
+                    <div class="IMG w-auto flex justify-center">
+                       <img src="[##cms.cms.cdn##]/@image" alt="@title" title="@title">
+                    </div>
+               </div>
+           </div>
+        </section>
+            </face>
+        </basis>
+        <basis core="print" datamembername="db.subCat">
+            <layout>
+                @child
+            </layout>
+            <face>
+                
+                <p  class="subcat">@catid</p>
+            </face>
+        </basis>
+  <div class="pros">
+
+  </div>
+     
+
+        <basis core="call" file="footer.inc" pageindex="[##cms.cms.pageindex##]"/>
+    </main>
+    <basis core="call" file="script.inc" pageindex="[##cms.cms.pageindex##]"/>
+  <script src="[##cms.cms.cdn##]/js/product-list.js"></script>
+
+</body>
+</html>

@@ -19,7 +19,6 @@ let swiperBanner = new Swiper(".swiper-banners", {
   },
 });
 let products =[...document.querySelectorAll('.product')]
-let projects =[...document.querySelectorAll('.project')]
 document.addEventListener('scroll',()=>{
     products.map(pro=>{
     let fadeElement = pro
@@ -29,14 +28,7 @@ document.addEventListener('scroll',()=>{
         pro.classList.add('fade-in')
     }
     })
-    projects.map(pro=>{
-        let fadeElement = pro
-        let positionElement = fadeElement.getBoundingClientRect().top+100;
-        let windowHeight = window.innerHeight
-        if(positionElement < windowHeight){
-            pro.classList.add('fade-in')
-        }
-        })
+  
    
 })
 
@@ -59,8 +51,8 @@ let hover = ()=>{
     pro.classList.add('hover')
    })
 }
-let proContainer = document.querySelector('.Products-container')
-proContainer.addEventListener('mouseover',(e)=>{
+let proContainer = document.querySelector('.Products-cat')
+proContainer.addEventListener('mouseleave',(e)=>{
     products.map(pro=>{
         pro.classList.remove('hover')
        }) 

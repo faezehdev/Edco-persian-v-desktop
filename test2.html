@@ -1,0 +1,43 @@
+<basis core="dbsource" source="media" name="db" lid="1" catid="2223"> 
+    <member type="list" name="gallery" perpage="10" pageno="1"  />
+ </basis>
+ <basis core="dbsource" source="basiscore" name="db" lid="1" mid="20" >
+     <member request="cat" type="tree" name="productCat" parentid="71218" postsql="select * from [db.productCat] where parentid in (71218)"></member>
+</basis>
+
+        <section class="section-2 w-full flex mt-[8em]">
+            <div class="Products-container gap-7 w-full flex flex-col">
+               <div class="Products-cat mb-[4em] w-90p mx-auto grid grid-cols-3 gap-[4em]">
+                <basis core="print" datamembername="db.productCat">
+                    <layout>
+                        @child
+                    </layout>
+                    <face filter="link = ' '">
+                        <a href="@link"  data-cat="@catid" alt="@title" title="@title" aria-label="@title" rel="noopener"
+                         class="product [&.hover]:opacity-[.6] [&.active]:!opacity-[1] [&.fade-in]:opacity-[1] [&.fade-in]:translate-y-[0] w-full flex flex-col gap-2 
+                        translate-y-[5em] opacity-0">
+                            <div class="IMG w-full flex justify-center items-center">
+                                <img src="[##cms.cms.cdn##]/@image"  alt="@title" title="@title"  class=" w-full object-cover">
+                            </div>
+                            <div class="Title mt-3 w-full flex justify-start items-start">
+                                <p class="font-IRANSansWebFANUM700 font-semibold text-lg leading-28.17 text-dark text-right">
+                                    @title
+                                </p>
+                            </div>
+                            <div class="Text w-full flex justify-start items-start flex-col">
+                                <p class="font-IRANSansWebFANUM300 font-light text-[11px] leading-[17.22px] text-dark text-justify">
+                                    @urldescription
+                                 </p>
+                            </div>
+                        </a>   
+                    </face>
+                  
+                </basis>
+              
+               </div>
+           
+            </div>
+        </section>
+
+
+    </main>

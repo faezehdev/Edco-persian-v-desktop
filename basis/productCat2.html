@@ -1,5 +1,6 @@
 <basis core="dbsource" source="basiscore" name="db" lid="1" mid="20" catid="[##cms.query.catid##]" >
-    <member request="cat" type="tree" name="productCat" parentid="[##cms.query.catid##]" size="339X340"></member>
+    <member request="cat" type="tree" name="productCat" parentid="[##cms.query.catid##]" size="339X340"
+    postsql="select * from [db.productCat] where parentid in (71307,71308,71309,71310,71311,71312,71313,71314)"></member>
 </basis>
 <basis core="dbsource" source="basiscore" name="db" lid="1" mid="20" >
     <member request="cat" type="tree" name="productCat1" parentid="[##cms.query.catid##]" 
@@ -19,7 +20,7 @@
         <basis core="call" file="header.inc" pageindex="[##cms.cms.pageindex##]"/>
         <basis core="print" datamembername="db.productCat" >
           
-            <face filter="parentid in (71307,71308,71309,71310,71311,71312,71313,71314) and @link is null">
+            <face filter="@link is not null">
          <section class="proCat group/proCat  w-full h-screen flex" style="background-image: url([##cms.cms.cdn##]/images/inner@catid.jpg);">
              <div class="cat-inner w-90p mx-auto flex h-full justify-center items-center">
                  <div class="rightSec w-[50%] flex flex-col group-odd/proCat:order-2">
@@ -33,7 +34,7 @@
                                 @title
                             </span>
                         </span> 
-                        <a href="product-list.bc?catid=@catid" data-cat="@catid"  alt="@title" title="@title" aria-label="@title" rel="noopener"
+                        <a href="@link" data-cat="@catid"  alt="@title" title="@title" aria-label="@title" rel="noopener"
                          class="defs w-[270px] h-[70px] flex justify-center items-center border-[1px] border-dark
                          font-IRANSansWebFANUM500 font-medium text-[30px] leading-[46.96px] text-dark">
                             رنگ‌ها و مدل‌ها
@@ -48,7 +49,7 @@
             </div>
          </section>
             </face>
-            <face filter="parentid in (71307,71308,71309,71310,71311,71312,71313,71314) and @link is null">
+            <face filter="@link is not null">
                 <section class="proCat group/proCat  w-full h-screen flex" style="background-image: url([##cms.cms.cdn##]/images/inner@catid.jpg);">
                     <div class="cat-inner w-90p mx-auto flex h-full justify-center items-center">
                         <div class="rightSec w-[50%] flex flex-col group-odd/proCat:order-2">
@@ -62,7 +63,7 @@
                                        @title
                                    </span>
                                </span> 
-                               <a href="@link" data-cat="@catid"  alt="@title" title="@title" aria-label="@title" rel="noopener"
+                               <a href="product-list.bc?catid=@catid" data-cat="@catid"  alt="@title" title="@title" aria-label="@title" rel="noopener"
                                 class="defs w-[270px] h-[70px] flex justify-center items-center border-[1px] border-dark
                                 font-IRANSansWebFANUM500 font-medium text-[30px] leading-[46.96px] text-dark">
                                    رنگ‌ها و مدل‌ها
@@ -77,7 +78,6 @@
                    </div>
                 </section>
                    </face>
-            
         </basis>
       
         <basis core="call" file="footer.inc" pageindex="[##cms.cms.pageindex##]"/>

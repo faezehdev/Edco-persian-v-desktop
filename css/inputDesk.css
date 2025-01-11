@@ -179,6 +179,7 @@ main.ProductCat-C .swiper-button-prev:after,main.ProductCat-C .swiper-rtl .swipe
   box-shadow: -1px 3px 7px 0px rgba(199, 199, 199, 1);
   padding-bottom: 1em;
   transition: all .5s ease;
+  justify-content: space-between;
   -webkit-transition: all .5s ease;
   
 }
@@ -246,15 +247,54 @@ transition: color .8s ease 0s;
 .swiper-scrollbar-drag{
   background-color:#00A752 !important;
 }
-main.ProductCat2-C .proCat{
+main.ProductCat2-C .proCat,
+main.ProductList-C .banner {
   background-repeat: no-repeat;
   background-size: cover;
 }
-.product-c {
-  flex: 1 1 calc(33.333% );
-  max-width:calc(33.333%);
-}
+
 
 .w-90p{
 max-width: 1400px;
 }
+.Home .section-2 .text p{
+font-size: 12px;
+font-weight: 300;
+line-height: 24.96px;
+font-family: "IRANSansWebFANUM300";
+color: #FFFFFF;
+text-align: justify;
+}
+.ArticleShow  .text-C p,
+.ArticleShow .text-I p{
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 21.91px;
+  font-family: "IRANSansWebFANUM300";
+  color:#000000;
+  text-align: justify;
+}
+.AboutUs-C .section-2 .Text p{
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 32px;
+  font-family: "IRANSansWebFANUM400";
+  color: #000000;
+  text-align: justify;
+  }
+  .AboutUs-C .section-3 .Text p{
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 26.78px;
+    font-family: "IRANSansWebFANUM400";
+    color: #FFFFFF;
+    text-align: justify;
+    }
+    .AboutUs-C .section-5 .Text p{
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 26.78px;
+      font-family: "IRANSansWebFANUM400";
+      color: #000000;
+      text-align: justify;
+      }

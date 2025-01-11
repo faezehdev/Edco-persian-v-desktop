@@ -2,12 +2,12 @@
 let projects =[...document.querySelectorAll('.project')]
 document.addEventListener('DOMContentLoaded',()=>{
     projects.map((pro,i)=>{
-        if(i<3){
+        if(i<6){
             pro.classList.add('show')
         }
         })
-        let visibleCount = 3
-        let itemPerpage = 3
+        let visibleCount = 6
+        let itemPerpage = 6
         let loadMoreBtn = document.querySelector('.showMore')
          let showMoreItems = ()=>{
             for(let i = visibleCount; i < visibleCount + itemPerpage; i++){

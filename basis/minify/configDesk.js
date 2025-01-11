@@ -1,0 +1,1 @@
+const lenis=new Lenis({smoothWheel:!0,wheelMultiplier:2});function raf(e){lenis.raf(e),requestAnimationFrame(raf)}requestAnimationFrame(raf),lenis.on("scroll",(e=>{let l=document.querySelector("header");0==e.scroll&&l.classList.remove("goDown"),e.scroll>0&&l.classList.add("goDown")}));

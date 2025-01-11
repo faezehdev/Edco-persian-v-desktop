@@ -1,0 +1,1 @@
+let Swiperpro=new Swiper(".swiper-products",{slidesPerView:"auto",spaceBetween:100,speed:500,grabCursor:!0,navigation:{nextEl:".swiper-button-next",prevEl:".swiper-button-prev"}});

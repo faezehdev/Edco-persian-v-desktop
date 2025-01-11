@@ -8,6 +8,8 @@ lenis.on('scroll',(e)=>{
         menuActive.classList.remove('fixsec')
     }
     if(e.scroll>10){
+        console.log(e);
+        
         fixSec.classList.add('fixsec')
         menuActive.classList.add('fixsec')
         let scrTop = e.scroll

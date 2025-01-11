@@ -1,0 +1,77 @@
+<basis core="dbsource" name="db" source="media" lid="1" sourcemid="1" usedforid="2343836"> 
+    <member name="poster" type="list" format="4" postsql="select * from [db.poster] where ord=10"/> 
+</basis>
+<basis core="dbsource" name="db" source="media" lid="1" sourcemid="1" usedforid="2343836"> 
+    <member name="image" type="list" format="4"/> 
+</basis>
+<basis core="dbsource" name="db" source="media" lid="1" sourcemid="1" usedforid="2343836"> 
+    <member name="pdf" type="list" format="9"/> 
+</basis>
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>کاتالوگ</title>
+    <meta name="description" content="کاتالوگ">
+    <basis core="call" file="styles.inc" pageindex="[##cms.cms.pageindex##]"/>
+</head>
+<body>
+    <main class="Catalogue-C flex flex-col overflow-hidden" dir="rtl">
+        <basis core="call" file="header.inc" pageindex="[##cms.cms.pageindex##]"/>
+      <section class="section-1 w-full h-screen flex justify-center items-center">
+        <div class="Banner w-full flex h-full relative">
+            <basis core="print" datamembername="db.image">
+                <layout>
+                    @child
+                </layout>
+                <face filter="ord=1">
+                    <div class="IMG w-full h-full">
+                        <img src="[##cms.cms.cdn##]/@largeIMG" alt="@name" title="@name" class="w-full h-full object-cover ">
+                    </div>
+                </face>
+            </basis>
+          
+          <div class="Title absolute top-0 left-0 bottom-8 right-0 h-full w-90p mx-auto z-1 flex justify-start items-end">
+            <h1 class="w-auto flex flex-col pb-[2.5em] text-center">
+                <span class="font-IRANSansWebFANUM900 font-bold text-[60px] leading-[93.91px] text-white">
+                    کاتالوگ  
+                </span>
+                <span class="font-IRANSansWebFANUM900 font-bold text-[60px] leading-[93.91px] text-white">
+                 و
+                </span>
+                <span class="font-IRANSansWebFANUM900 font-bold text-[60px] leading-[93.91px] text-white">
+                    دانلودها
+                </span>
+            </h1>
+          </div>
+        </div>
+      </section>
+      <section class="section-2 w-full  flex justify-center items-center mt-[8em] mb-[8em]">
+       <div class="Catalogs w-90p mx-auto grid grid-cols-3 gap-[4em]">
+        <basis core="print" datamembername="db.pdf">
+            <layout>
+                @child
+            </layout>
+            <face filter="ord=1000">
+                <div class="catalog w-full flex flex-col gap-3  group/catalog">
+                    <div class="IMG w-full overflow-hidden flex">
+                        <img src="[##cms.cms.cdn##]/[##db.poster.largeIMG##]" alt="@name" title="@name" class="w-full object-cover group-hover/catalog:scale-[1.1] duration-[1000ms]">
+                    </div>
+                    <div class="Title w-full flex justify-center items-center">
+                        <a href="@largeIMG" alt="@name" title="@name"  aria-label="@name" rel="noopener"
+                         download="" class="font-IRANSansWebFANUM400 font-normal text-2xl leading-37.57 text-dark">
+                            محصولات
+                        </a>
+                    </div>
+                </div> 
+            </face>
+        </basis>
+       
+       </div>
+      </section>
+      <basis core="call" file="footer.inc" pageindex="[##cms.cms.pageindex##]"/>
+    </main>
+    <basis core="call" file="script.inc" pageindex="[##cms.cms.pageindex##]"/>
+</body>
+</html>

@@ -1,0 +1,120 @@
+<basis core="dbsource" name="db" source="basiscore" lid="1" mid="19" usedforid="[##cms.query.id##]"> 
+  <member name="project" type="view"/> 
+</basis>
+<basis core="dbsource" name="db" source="basiscore" lid="1" mid="19" usedforid="[##cms.query.id##]"> 
+  <member name="title" type="view" postsql="select * from [db.title] where TypeID=150"/> 
+</basis>
+<basis core="dbsource" name="db" source="media" lid="1" sourcemid="19" usedforid="[##cms.query.id##]"> 
+    <member name="image-project" type="list" format="4"/> 
+</basis>
+<basis core="dbsource" name="db" source="basiscore" lid="1" mid="19" usedforid="[##cms.query.id##]"> 
+  <member name="related-product" type="list" blgid="630" size="133x132"> </member> 
+</basis>
+<basis core="dbsource" source="basiscore" name="json" lid="1" usedforid="[##cms.query.id##]">
+  <member request="json-ld" type="scalar" name="fq" />
+</basis>
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[##cms.seo.title##]</title>
+    <meta name="description" content="[##cms.seo.description##]">
+    <basis core="call" file="styles.inc" pageindex="[##cms.cms.pageindex##]"/>
+</head>
+<body>
+    <main class="ProjectShow flex flex-col overflow-hidden" dir="rtl">
+        <basis core="call" file="header.inc" pageindex="[##cms.cms.pageindex##]"/>
+    
+           
+              <basis core="print" datamembername="db.image-project">
+                  <layout>
+                    <section class="section-1 w-full h-screen flex justify-center items-center">
+                      <div class="Banner w-full flex h-full relative">
+                      @child
+                      </div>
+                    </section>
+                  </layout>
+                  <face filter="ord=1">
+                    <div class="IMG w-full h-full">
+                      <img src="@largeIMG" alt="[##db.title.Answer##]" title="[##db.title.Answer##]" class="w-full h-full object-cover ">
+                  </div>
+                  </face>
+              </basis>
+            
+
+
+          <section class="section-2 w-full flex mt-[6em]">
+            <div class="ProjectsIMG-container gap-7 w-full flex flex-col">
+               <div class="Title-big w-90p mx-auto flex justify-start items-start">
+                    <h1 class="font-IRANSansWebFANUM500 text-2xl leading-37.57 text-dark font-medium text-right">
+                      [##db.title.Answer##]
+                    </h1>
+               </div>
+                  <basis core="print" datamembername="db.image-project">
+                      <layout>
+                        <div class="gallerys mb-[4em] w-90p mx-auto flex flex-col">
+                          <div class="gallery w-full flex flex-col gap-3">
+                          @child
+                          </div>
+                        </div>
+
+                      </layout>
+                      <face filter="ord=1000">
+                        <div class="IMG w-full flex justify-center">
+                          <img src="@largeIMG" alt="[##db.title.Answer##]" title="[##db.title.Answer##]" class="w-full object-cover">
+                      </div>
+                      </face>
+                  </basis>                          
+            </div>
+        </section>
+    
+     
+             
+             
+                      <basis core="print" datamembername="db.related-product">
+                        <layout>
+                          <section class="section-3 w-full flex mt-[4em]">
+                            <div class="Related-container gap-7 w-full flex flex-col">
+                          <div class="Title-big2 border-r-[3px] py-[.5em] border-green w-90p mx-auto flex justify-start items-start">
+                            <h2 class="font-IRANSansWebFANUM400 mr-[.5em] text-lg leading-28.17 text-dark font-normal text-right">
+                                محصولات مرتبط
+                            </h2>
+                       </div>
+                          <div class="Products mb-[4em] bg-dark1 w-90p mx-auto flex flex-col">
+                          <div class="swiper-products py-[1.5em] relative w-full overflow-hidden">
+                          <div class="swiper-wrapper">
+                            @child
+                          </div>
+                          
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                          </div>
+                          </div>
+                            </div>
+                          </section>
+                        </layout>
+                        <face>
+                          <div class="swiper-slide flex">
+                            <a href="@link" data-cat="@catid"  alt="@title" title="@title" aria-label="@title" rel="noopener" class="product-x w-auto flex flex-col gap-2">
+                              <div class="IMG w-[134px] h-[133px]">
+                                <img src="/@00133X00132prp" alt="@title" title="@title"  class="w-full h-full object-cover">
+                              </div>
+                              <div class="Title w-auto flex justify-center">
+                                <p class="font-IRANSansWebFANUM300 font-light text-xs leading-18.78 text-white text-clip">
+                                   @title
+                                </p>
+                              </div>
+                            </a> 
+                           </div>
+                        </face>
+                    </basis>
+        <basis core="call" file="footer.inc" pageindex="[##cms.cms.pageindex##]"/>
+    </main>
+<basis core="call" file="script.inc" pageindex="[##cms.cms.pageindex##]"/>
+<script src="[##cms.cms.cdn3##]/js/project.js"></script>
+<script type="application/ld+json">
+  [##json.fq.column1##]
+</script>
+</body>
+</html>

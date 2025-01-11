@@ -1,0 +1,51 @@
+<script src="https://cdn.basiscore.net/academy.basiscore.com/_js/basiscore-2.23.1.min.js"></script>
+<basis core="dbsource" source="basiscore" name="db" lid="2" mid="20">
+    <member request="cat" type="tree" name="subCat"  parentid="[##cms.query.catid##]"  
+    postsql="select * from [db.subCat] where parentid=[##cms.query.catid##]" />
+</basis>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+   <div class="sec"></div>
+    <basis core="print" datamembername="db.subCat">
+        <layout>
+            @child
+        </layout>
+        <face>
+            
+            <p class="subcat">@catid</p>
+        </face>
+    </basis>
+    <script>
+        let countCat = document.querySelectorAll('p.subcat')
+    
+        for(let i = 0 ; i <countCat.length ; i++){
+            fetch(`http://r98w118.undertest.ir/loadProduct.inc?catid=${countCat[i].innerHTML}`)
+            .then((response)=>{
+             return response.text()
+            })
+            .then((html)=>{
+               
+                const parser = new DOMParser()
+                const doc = parser.parseFromString(html,'text/html')
+                let productsSec = [...doc.querySelectorAll('.productContainer')]
+                let parent = document.querySelector('.sec')
+                productsSec.forEach(p=>{
+                   parent.appendChild(p)
+                })
+                console.log(productsSec);
+            })
+        }
+   
+    </script>
+</body>
+</html>
