@@ -8,6 +8,9 @@
  <basis core="dbsource" source="basiscore" mid="1" lid="1" name="db" catid="71198"> 
     <member name="articles" type="list" link="article.bc" propertyid="7245" size="305X177" postsql=" select *, SUBSTR(prp_7245, 1,200-CHARINDEX(' ', REVERSE(SUBSTR(prp_7245, 1, 200)))) || '...' as substr from [db.articles]"> 
  </member>
+ <basis core="dbsource" source="media" name="db" lid="1" sourcemid="19" usedforid="2326400">
+    <member type="list" name="gallery" format="4" ></member>
+  </basis>
  </basis>
 <!DOCTYPE html>
 <html lang="fa">
@@ -22,32 +25,65 @@
     <main class="ProjectList-C flex flex-col overflow-hidden"  dir="rtl">
         <basis core="call" file="header.inc" pageindex="[##cms.cms.pageindex##]"/>
         <section class="section-1 w-full h-screen flex justify-center items-center">
-            <basis core="print" datamembername="db.ProjectDef">
-                <layout>
-                    @child
-                </layout>
-                <face>
+       
                     <div class="Banner w-full flex h-full relative">
+                        <basis core="print" datamembername="db.ProjectDef">
+                            <layout>
+                                @child
+                            </layout>
+                            <face>
                         <div class="IMG w-full h-full">
                             <img src="[##cms.cms.cdn3##]/@01280X00623prp" alt="@title" title="@title" class="w-full h-full object-cover ">
                         </div>
+                    </face>
+                </basis>
                       <div class="Title absolute flex-col top-0 left-0 pb-[4em] right-0 h-full w-90p mx-auto z-1 flex justify-end items-start">
+                        <basis core="print" datamembername="db.ProjectDef">
+                            <layout>
+                                @child
+                            </layout>
+                            <face>
                         <h1 class="w-auto flex flex-col font-IRANSansWebFANUM300 font-light text-[70px] leading-[109.7px] text-white">
                             @title
                         </h1>
+                            </face>
+                        </basis>
                         <span class="Detail w-auto flex gap-2">
+                            <basis core="print" datamembername="db.ProjectDef">
+                
+                                <face>
                             <h2 class="font-IRANSansWebFANUM700 text-[30px] text-white font-semibold leading-[46.96px]">
-                                @prp_13903
+                                @prp_13889
                             </h2>
-                            <span class="font-IRANSansWebFANUM700 text-[30px] text-white font-semibold leading-[46.96px]">|</span>
-                            <h2 class="font-IRANSansWebFANUM700 text-[30px] text-white font-semibold leading-[46.96px]">
-                                @prp_13889	
-                            </h2>
+                                </face>
+                            </basis>
+                            <!-- <span class="font-IRANSansWebFANUM700 text-[30px] text-white font-semibold leading-[46.96px]">|</span>
+                         -->
+                            <!-- <h2 class="font-IRANSansWebFANUM700 text-[30px] text-white font-semibold leading-[46.96px]">
+                                @description
+                            </h2> -->
+                               
                         </span>
+                        <!-- <span class="Detail w-auto flex gap-2">
+                            <basis core="print" datamembername="db.gallery">
+                                <face filter="ord in (20)">
+                            <h2 class="font-IRANSansWebFANUM700 text-[30px] text-white font-semibold leading-[46.96px]">
+                                @name
+                            </h2>
+                                </face>
+                            </basis>
+                            <span class="font-IRANSansWebFANUM700 text-[30px] text-white font-semibold leading-[46.96px]">|</span>
+                            <basis core="print" datamembername="db.gallery">
+                                <face filter="ord in (20)">
+                            <h2 class="font-IRANSansWebFANUM700 text-[30px] text-white font-semibold leading-[46.96px]">
+                                @description
+                            </h2>
+                                </face>
+                            </basis>
+                        </span> -->
                       </div>
                     </div>
-                </face>
-            </basis>
+              
        
           </section>
           <section class="section-2 w-full flex mt-[6em]">
@@ -81,7 +117,7 @@
                                 <div class="Schema w-full flex justify-between items-start">
                                     <span class="Question w-[50%] max-w-[50%] text-right flex justify-start items-center font-IRANSansWebFANUM300 font-light text-sm
                                     leading-21.91 text-dark">
-                                    @prp_13903
+                                    محل
         
                                     </span>
                                     <span class="Answer w-[50%] max-w-[50%]  flex justify-end items-center font-IRANSansWebFANUM300 font-light text-sm
@@ -89,8 +125,60 @@
                                     @prp_13889
                                     </span>
                                 </div>
-                              
-                                    
+                                <div class="Schema w-full flex justify-between items-start">
+                                    <span class="Question w-[50%] max-w-[50%] text-right flex justify-start items-center font-IRANSansWebFANUM300 font-light text-sm
+                                    leading-21.91 text-dark">
+                                    مالک
+        
+                                    </span>
+                                    <span class="Answer w-[50%] max-w-[50%]  flex justify-end items-center font-IRANSansWebFANUM300 font-light text-sm
+                                    leading-21.91 text-dark">
+                                    @prp_90752
+                                    </span>
+                                </div>
+                                <div class="Schema w-full flex justify-between items-start">
+                                    <span class="Question w-[50%] max-w-[50%] text-right flex justify-start items-center font-IRANSansWebFANUM300 font-light text-sm
+                                    leading-21.91 text-dark">
+                                    سازنده
+        
+                                    </span>
+                                    <span class="Answer w-[50%] max-w-[50%]  flex justify-end items-center font-IRANSansWebFANUM300 font-light text-sm
+                                    leading-21.91 text-dark">
+                                    @prp_90766
+                                    </span>
+                                </div>
+                                <div class="Schema w-full flex justify-between items-start">
+                                    <span class="Question w-[50%] max-w-[50%] text-right flex justify-start items-center font-IRANSansWebFANUM300 font-light text-sm
+                                    leading-21.91 text-dark">
+                                    معمار
+        
+                                    </span>
+                                    <span class="Answer w-[50%] max-w-[50%]  flex justify-end items-center font-IRANSansWebFANUM300 font-light text-sm
+                                    leading-21.91 text-dark">
+                                    @prp_90750
+                                    </span>
+                                </div>
+                                <div class="Schema w-full flex justify-between items-start">
+                                    <span class="Question w-[50%] max-w-[50%] text-right flex justify-start items-center font-IRANSansWebFANUM300 font-light text-sm
+                                    leading-21.91 text-dark">
+                                    واحد
+        
+                                    </span>
+                                    <span class="Answer w-[50%] max-w-[50%]  flex justify-end items-center font-IRANSansWebFANUM300 font-light text-sm
+                                    leading-21.91 text-dark">
+                                    <!-- @prp_90750 -->
+                                    </span>
+                                </div>
+                                <div class="Schema w-full flex justify-between items-start">
+                                    <span class="Question w-[50%] max-w-[50%] text-right flex justify-start items-center font-IRANSansWebFANUM300 font-light text-sm
+                                    leading-21.91 text-dark">
+                                    مدل سوئیچ
+                                    </span>
+                                    <span class="Answer w-[50%] max-w-[50%]  flex justify-end items-center font-IRANSansWebFANUM300 font-light text-sm
+                                    leading-21.91 text-dark">
+                                    <!-- @prp_90750 -->
+                                    </span>
+                                </div>
                               </div>
                     </a>
                      

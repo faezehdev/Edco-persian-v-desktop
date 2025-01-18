@@ -817,6 +817,10 @@ video {
   margin-bottom: auto;
 }
 
+.mb-0 {
+  margin-bottom: 0px;
+}
+
 .mb-10 {
   margin-bottom: 2.5rem;
 }
@@ -851,6 +855,10 @@ video {
 
 .mb-\[7em\] {
   margin-bottom: 7em;
+}
+
+.mb-\[8em\] {
+  margin-bottom: 8em;
 }
 
 .ml-auto {
@@ -893,6 +901,10 @@ video {
   margin-top: 2.25rem;
 }
 
+.mt-\[1em\] {
+  margin-top: 1em;
+}
+
 .mt-\[2em\] {
   margin-top: 2em;
 }
@@ -909,16 +921,20 @@ video {
   margin-top: 5em;
 }
 
+.mt-\[6em\] {
+  margin-top: 6em;
+}
+
 .mt-\[8em\] {
   margin-top: 8em;
 }
 
-.mb-\[8em\] {
-  margin-bottom: 8em;
+.mb-\[em\] {
+  margin-bottom: em;
 }
 
-.mt-\[6em\] {
-  margin-top: 6em;
+.mt-\[em\] {
+  margin-top: em;
 }
 
 .box-border {
@@ -1085,16 +1101,12 @@ video {
   max-height: 0px;
 }
 
-.min-h-screen {
-  min-height: 100vh;
-}
-
-.min-h-\[50\] {
-  min-height: 50;
-}
-
 .min-h-\[50px\] {
   min-height: 50px;
+}
+
+.min-h-screen {
+  min-height: 100vh;
 }
 
 .w-44 {
@@ -2501,6 +2513,11 @@ video {
   padding-right: 5em;
 }
 
+.py-\[\.2em\] {
+  padding-top: .2em;
+  padding-bottom: .2em;
+}
+
 .py-\[\.3em\] {
   padding-top: .3em;
   padding-bottom: .3em;
@@ -2541,11 +2558,6 @@ video {
   padding-bottom: 5em;
 }
 
-.py-\[\.2em\] {
-  padding-top: .2em;
-  padding-bottom: .2em;
-}
-
 .pb-\[\.2em\] {
   padding-bottom: .2em;
 }
@@ -2556,6 +2568,10 @@ video {
 
 .pb-\[1em\] {
   padding-bottom: 1em;
+}
+
+.pb-\[2\.5em\] {
+  padding-bottom: 2.5em;
 }
 
 .pb-\[4em\] {
@@ -2596,14 +2612,6 @@ video {
 
 .pt-\[3em\] {
   padding-top: 3em;
-}
-
-.pb-\[1\.5em\] {
-  padding-bottom: 1.5em;
-}
-
-.pb-\[2\.5em\] {
-  padding-bottom: 2.5em;
 }
 
 .text-left {
@@ -2752,8 +2760,16 @@ video {
   line-height: 1rem;
 }
 
+.font-black {
+  font-weight: 900;
+}
+
 .font-bold {
   font-weight: 700;
+}
+
+.font-extrabold {
+  font-weight: 800;
 }
 
 .font-extralight {
@@ -3514,7 +3530,7 @@ a {
 
 @keyframes line{
   0% {
-    margin-top: -47px
+    margin-top: -105px
   }
 
   80% {
@@ -3529,6 +3545,7 @@ a {
 main.Home .Aboutus.bg{
   background-repeat: no-repeat;
   background-size: cover;
+  height: 100vh;
 }
 
 .product,
@@ -3691,7 +3708,7 @@ main.ProductList-C .banner {
 }
 
 .AboutUs-C .section-3 .Text p{
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 400;
   line-height: 26.78px;
   font-family: "IRANSansWebFANUM400";
@@ -3706,6 +3723,10 @@ main.ProductList-C .banner {
   font-family: "IRANSansWebFANUM400";
   color: #000000;
   text-align: justify;
+}
+
+.ContactUS-C .section-3 .Socials {
+  margin-top: 2em;
 }
 
 @media (min-width: 480px) {

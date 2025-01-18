@@ -13,6 +13,9 @@
 <basis core="dbsource" name="db" source="basiscore" lid="1" mid="1" usedforid="1446499"> 
     <member name="VISION" type="view"/>
 </basis>
+<basis core="dbsource" name="db" source="basiscore" lid="1" mid="1" usedforid="1446499"> 
+    <member name="VISIONtitle" type="view" postsql="select * from [db.VISIONtitle] where TypeID=250"/>
+</basis>
 <basis core="dbsource" name="db" source="media" lid="1" sourcemid="1" usedforid="1446499"> 
     <member name="image-VISION" type="list" format="4"/> 
 </basis>
@@ -45,7 +48,7 @@
             </div>
           </section>
 
-          <section class="section-2 mb-[7em] w-full mt-[5em] flex flex-col justify-center items-center">
+          <section class="section-2 mb-[7em] w-full mt-[6em] flex flex-col justify-center items-center">
             <div class="Title w-90p mx-auto flex justify-start items-center">
                 <basis core="print" datamembername="db.about">
                     <layout>
@@ -139,15 +142,15 @@
           </section>
 
           <section class="section-4 mb-[7em] w-full mt-[5em] flex flex-col justify-center items-center">
-            <basis core="print" datamembername="db.VISION">
+            <basis core="print" datamembername="db.VISIONtitle">
                 <layout>
                     @child
                 </layout>
-                <face filter="TypeID=150">
+                <face filter="Rownumber=1">
                     <div class="Title mb-[3em] w-90p mx-auto flex justify-start items-center">
                         <h3 class="font-IRANSansWebFANUM500 font-normal text-2xl leading-[40.18px] text-dark
                         border-b-[3px] border-green pb-[.2em]">
-                      @Answer
+                      @Text
                         </h3>
                     </div>  
                 </face>

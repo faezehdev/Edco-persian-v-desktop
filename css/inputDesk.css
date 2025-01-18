@@ -127,7 +127,7 @@
   
 @keyframes line{
     0% {
-     margin-top: -47px
+     margin-top: -105px
  }
  80% {
      margin-top: 0px
@@ -139,6 +139,7 @@
 main.Home .Aboutus.bg{
 background-repeat: no-repeat;
 background-size: cover;
+height: 100vh;
 }
 
 .product,
@@ -251,6 +252,7 @@ main.ProductCat2-C .proCat,
 main.ProductList-C .banner {
   background-repeat: no-repeat;
   background-size: cover;
+
 }
 
 
@@ -283,7 +285,7 @@ text-align: justify;
   text-align: justify;
   }
   .AboutUs-C .section-3 .Text p{
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 400;
     line-height: 26.78px;
     font-family: "IRANSansWebFANUM400";
@@ -297,4 +299,7 @@ text-align: justify;
       font-family: "IRANSansWebFANUM400";
       color: #000000;
       text-align: justify;
+      }
+     .ContactUS-C .section-3 .Socials {
+        margin-top: 2em;
       }
